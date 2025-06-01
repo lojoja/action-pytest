@@ -1,0 +1,44 @@
+name: Pytest
+description: >-
+  Run pytest tests, optionally with coverage.
+  Projects must specify pytest, and optionally pytest-cov, as a dependency.
+
+inputs:
+  cache:
+    description: Whether to cache project dependencies.
+    required: false
+    default: "true"
+  coverage:
+    description: Whether to include coverage in the tests.
+    required: false
+    default: "true"
+  package_manager:
+    description: The package manager to use ("poetry" or "uv").
+    required: false
+    default: uv
+  python_version:
+    description: The python version to use in SemVer range syntax.
+    required: false
+    default: "3.13"
+  working_directory:
+    description: The directory to execute commands in.
+    required: false
+    default: "."
+
+outputs: {}
+
+runs:
+  using: composite
+  steps:
+    - name: Install python
+      uses: lojoja/action-setup-python-env@main
+      with:
+        cache: ${{ inputs.cache }}
+        package_manager: ${{ inputs.package_manager }}
+        python_version: ${{ inputs.python_version }}
+        working_directory: ${{ inputs.working_directory }}
+
+    - name: Run pytest
+      run: ${{ inputs.package_manager }} run pytest${{ inputs.coverage == 'true' && ' --cov' || '' }}
+      shell: bash
+      working-directory: ${{ inputs.working_directory }}

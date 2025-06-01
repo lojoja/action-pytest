@@ -1,0 +1,23 @@
+[project]
+name = "action-pytest"
+version = "0.0.0"
+requires-python = ">=3.13,<4"
+dependencies = [
+  "pytest (==8.3.5)",
+  "pytest-cov (==6.1.1)"
+]
+
+[build-system]
+requires = ["uv_build>=0.7.1,<1.0.0"]
+build-backend = "uv_build"
+
+[tool.coverage.run]
+source = ["src"]
+omit = ["tests/"]
+
+[tool.coverage.report]
+fail_under = 100
+show_missing = true
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
