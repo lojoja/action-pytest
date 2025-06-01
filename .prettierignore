@@ -3,8 +3,10 @@
 ._*
 .coverage/
 .DS_Store
+.egg-info/
 .pnpm-store/
 .pytest_cache/
 .venv/
+__pycache__/
 node_modules/
 pnpm-lock.yaml

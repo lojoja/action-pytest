@@ -1,12 +1,18 @@
 {
   "folders": [
     {
-      "folder_exclude_patterns": ["node_modules"],
+      "folder_exclude_patterns": ["__pycache__", "*.egg-info", ".pytest_cache", "node_modules"],
       "path": "."
     }
   ],
   "settings": {
     "LSP": {
+      "LSP-pylsp": {
+        "enabled": false
+      },
+      "LSP-pyright": {
+        "enabled": false
+      },
       "LSP-yaml": {
         "settings": {
           "yaml.schemas": {

@@ -3,6 +3,8 @@
 ._*
 .coverage/
 .DS_Store
+.egg-info/
 .pytest_cache/
 .venv/
+__pycache__/
 node_modules/
