@@ -20,7 +20,7 @@ This repository is not meant to be referenced in third-party workflows; please f
 
 ```
 jobs:
-  python:
+  pytest:
     runs-on: ubuntu-latest
     steps:
       - uses: lojoja/action-pytest@main
@@ -35,7 +35,7 @@ jobs:
 
 ```
 jobs:
-  python:
+  pytest:
     runs-on: ubuntu-latest
     steps:
       - uses: lojoja/action-pytest@main
