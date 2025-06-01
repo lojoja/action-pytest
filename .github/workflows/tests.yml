@@ -8,6 +8,9 @@ on:
   workflow_call:
   workflow_dispatch:
 
+env:
+  PYTHON_VERSION: "3.13"
+
 jobs:
   changes:
     name: Identify changes
@@ -44,7 +47,7 @@ jobs:
         uses: ./
         with:
           coverage: "false"
-          python_version: "3.13"
+          python_version: ${{ env.PYTHON_VERSION }}
           working_directory: tests
 
   test-pytest-coverage:
@@ -60,7 +63,7 @@ jobs:
         uses: ./
         with:
           coverage: "true"
-          python_version: "3.13"
+          python_version: ${{ env.PYTHON_VERSION }}
           working_directory: tests
 
   result:
