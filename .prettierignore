@@ -1,7 +1,7 @@
 *.lock
 *.sublime-workspace
 ._*
-.coverage/
+.coverage
 .DS_Store
 .egg-info/
 .pnpm-store/
