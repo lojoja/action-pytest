@@ -1,8 +1,10 @@
-!*
+*.lock
 *.sublime-workspace
 ._*
 .coverage/
 .DS_Store
+.pnpm-store/
 .pytest_cache/
 .venv/
 node_modules/
+pnpm-lock.yaml
