@@ -1,9 +1,9 @@
+*.egg-info/
 *.lock
 *.sublime-workspace
 ._*
 .coverage
 .DS_Store
-.egg-info/
 .pnpm-store/
 .pytest_cache/
 .venv/

@@ -1,9 +1,9 @@
 !*
+*.egg-info/
 *.sublime-workspace
 ._*
 .coverage
 .DS_Store
-.egg-info/
 .pytest_cache/
 .venv/
 __pycache__/
