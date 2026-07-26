@@ -11,7 +11,7 @@ This repository is not meant to be referenced in third-party workflows; please f
 | cache             | Whether to cache project dependencies.            | "true"  |
 | coverage          | Whether to generate a coverage report.            | "true"  |
 | package_manager   | The package manager to use ("poetry" or "uv").    | "uv"    |
-| python_version    | The python version to use in SemVer range syntax. | "3.13"  |
+| python_version    | The python version to use in SemVer range syntax. | "3.14"  |
 | working_directory | The working directory for the action.             | "."     |
 
 ## Examples
@@ -28,7 +28,7 @@ jobs:
           cache: "true"
           coverage: "false"
           package_manager: uv
-          python_version: "3.13"
+          python_version: "3.14"
 ```
 
 ### With coverage
@@ -43,7 +43,7 @@ jobs:
           cache: "true"
           coverage: "true"
           package_manager: uv
-          python_version: "3.13"
+          python_version: "3.14"
 ```
 
 ## License
